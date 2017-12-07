@@ -1,6 +1,6 @@
-#Testing clang’s compilation time cross-compiling CTMark for aarch64
+# Testing clang’s compilation time cross-compiling CTMark for aarch64
 
-##Testing using CMake builds
+## Testing using CMake builds
 
 Check out llvm:
 ```
@@ -102,7 +102,7 @@ min    212.436000  215.052000 -0.003022
 max    711.336000  713.640000  0.116191
 ```
 
-##Testing using LNT
+## Testing using LNT
 
 Install virtualenv and create new environment:
 ```
