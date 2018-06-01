@@ -336,6 +336,13 @@ private:
 
 ## Linux internals
 
+## Computer architecture
+
+1. How virtual memory works? What is MMU?
+2. What is page table? Why do we use pages?
+Typically 4KB pages.
+3. How many PTEs (Page Table Entries) will we need in the Page Table with 4kB pages on a 32-bit machine?
+
 ## GDB
 
 1. b, info b
