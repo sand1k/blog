@@ -12,7 +12,7 @@
 ### Sort algorithms
 
 | Algorithm                 | Worst                | Expected                      | Comment            |
-|---------------------------| -------------------- | ------------------------------|                    |
+|---------------------------| -------------------- | ------------------------------|--------------------|
 | Insertion sort (вставкой) | &#1012;(n^2)         | &#1012;(n^2)                  |                    |
 | Merge sort (слиянием)     | &#1012;(n*lg(n))     | &#1012;(n*lg(n)               | Used for lists.    |
 | Heap sort (пирамидальная) | O(n*lg(n))           |  -                            |                    |
@@ -25,8 +25,12 @@
 
 ##### Heap
 
-heap_size - heap size
+![Img. 1 Heap](images/heap.png "Max-heap")
+
+heap_size - number of correct elements in array
 legnth - number of elements in heap
+
+0 <= A.heap-size <= A.length
 
 
 ```
@@ -41,6 +45,8 @@ Right(i)
 ```
 
 ##### Max_Heapify
+
+i - node which breaks property of non-increasing heap
 
 Complexity: O(lg(n))
 ```
@@ -107,6 +113,46 @@ Invariant:
 1. if p <= k <= i, then A[k] <= x
 2. if i + 1 <= k <= j - 1, then A[k] > x
 3. if k == r, then A[k] == x.
+
+
+### Priority queue
+
+Insert(S, x)
+Maximum(S)
+Extract-Max(S)
+Increase-Key(S, x, k)
+
+```
+Heap-Maximum(A)
+	return A[1]
+```
+
+```
+Heap-Extract-Max(A)
+	if A.heap-size < 1
+		error "Empty queue"
+	max = A[1]
+	A[1] = A[A.heap-size]
+	A.heap-size = A.heap-size - 1
+	Max-Heapify(A,1)
+	return max
+```
+
+```
+Heap-Increase-Key(A, i, key)
+	if key < A[i]
+		error "New key is less than current"
+	A[i] = key
+	while i > 1 and A[Parent(i)] < A[i]
+		swap(A[i], A[Parent(i)])
+		i = Parent(i)
+```
+
+```
+Max-Heap-Insert(A, key)
+	A.heap-size = A.heap-size + 1
+	A[A.heap-size] = -inf
+	Heap-Increase-Key(A, A.heap-size, key)
 
 
 ## C / C++
