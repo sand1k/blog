@@ -153,7 +153,7 @@ Max-Heap-Insert(A, key)
 	A.heap-size = A.heap-size + 1
 	A[A.heap-size] = -inf
 	Heap-Increase-Key(A, A.heap-size, key)
-
+```
 
 ## C / C++
 
