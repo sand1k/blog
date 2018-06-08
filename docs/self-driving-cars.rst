@@ -12,6 +12,13 @@ Links:
 
 #. Repository: https://github.com/microsoft/airsim
 
+Apollo (Baidu)
+```````
+
+Links:
+
+#. https://github.com/ApolloAuto/apollo
+
 Gazebo car simulator
 ```````````````````
 
