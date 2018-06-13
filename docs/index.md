@@ -2,3 +2,5 @@ My articles:
 * [Testing clang’s compilation time cross-compiling CTMark for aarch64](/blog/llvm-measure-ct-cross-arch64)
 * [CNN notes](/blog/cnn)
 * [toolchain notes](/blog/toolchain)
+* [Robotics](/blog/robotics)
+* [Self-driving cars](/blog/self-driving-cars)
