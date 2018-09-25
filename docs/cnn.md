@@ -23,3 +23,14 @@ Bounding Box Predictions
 Intersection over union - to say how well object was detected the ratio of intersection (between detected rectangle and actual rectangle) over their is calculated. Usually threshold 0.5 is used to say that detection was good.
 
 Non-max Suppression - cleans up redundant detections of the algorithm.
+
+
+## CUDA installation
+
+Check GPU support:
+```
+python3
+
+import tensorflow as tf
+sess = tf.Session(config=tf.ConfigProto(log_device_placement=True))
+```
