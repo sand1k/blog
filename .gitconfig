@@ -1,9 +1,8 @@
 [user]
-    name = Andrey Shitov
-    email = sand1k@yandex.ru 
+	name = Andrey Shitov
+	email = sand1k@yandex.ru
 [core]
     editor = vim
-	excludesfile = /Users/andrey/.gitignore_global
 [alias]
     hist = log --pretty=format:\"%h %ad | %s%d [%an]\" --graph --date=short
 [color]
@@ -24,24 +23,14 @@
     untracked = red bold
 [diff]
 #   external = /home/andrey/diff.py
-    guitool = meld
+#   guitool = meld
 [difftool]
     prompt = false
 [branch]
     autosetuprebase = always
-[difftool "meld"]
-    trustExitCode = true
-    cmd = open -W -a Meld --args \"$LOCAL\" \"$REMOTE\"
 [merge]
     tool = meld
-[mergetool]
-    prompt = false
-[mergetool "meld"]
-    trustExitCode = true
-    cmd = open -W -a Meld --args --auto-merge \"$LOCAL\" \"$BASE\" \"$REMOTE\" --output=\"$MERGED\"
-[difftool "sourcetree"]
-	cmd = opendiff \"$LOCAL\" \"$REMOTE\"
-	path = 
-[mergetool "sourcetree"]
-	cmd = /Applications/Sourcetree.app/Contents/Resources/opendiff-w.sh \"$LOCAL\" \"$REMOTE\" -ancestor \"$BASE\" -merge \"$MERGED\"
-	trustExitCode = true
+[credential "https://github.sec.samsung.net"]
+    username = a.shitov
+    helper = cache
+
