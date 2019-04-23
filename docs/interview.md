@@ -349,6 +349,9 @@ private:
 ## Asm
 1. Что такое ассемблер? Для чего нужен?
 
+## Linux
+1. Describe how 'fork' call works?
+
 ## Linux internals
 
 ## Computer architecture
