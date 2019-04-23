@@ -163,6 +163,17 @@ Max-Heap-Insert(A, key)
 
 1. Как удалить элемент из односвязного списка, если нет указателя на начало?
 2. Основные принципы ООП?
+3. Чем ABI отличается от API?
+Application Binary Interface - an interface between two binary program modules. An ABI defines how data structures or computational routines are accessed in machine code, which is a low-level, hardware-dependent format.
+ABI can be affected by:
+- Calling convention
+- Exception handling
+- Name mangling
+- C++ runtime
+- Binary representation of types
+- vtable layout
+- inheritance, namespaces, overloading
+4. What is ABI compatability? What is source compatability?
 
 
 ## Multi-threaded programming
