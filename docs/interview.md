@@ -1,5 +1,35 @@
 # Interview questions
 
+# C
+
+```
+#include <stdio.h>
+#include <stdlib.h>
+#include <time.h>
+
+
+char* intToStr(int x)
+{
+    char buf[4];
+    sprintf(buf, "%d", x);
+    return buf;
+}
+
+int main(int argc, char *argv[])
+{
+    srand(time(NULL));
+
+    int a = rand() % 10500; // 3456
+
+    printf("Hello world!\n");
+
+    char *str = intToStr(a);
+    printf("Integer is %s\n", str);
+
+    return str != NULL ? 0 : 1;
+}
+```
+
 ## Algorithms and data structures
 
 Вопросы:
