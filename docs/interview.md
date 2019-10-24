@@ -1,6 +1,6 @@
 # Interview questions
 
-# C
+# Code samples
 
 ```
 #include <stdio.h>
@@ -28,6 +28,43 @@ int main(int argc, char *argv[])
 
     return str != NULL ? 0 : 1;
 }
+```
+```
+#include <thread>
+#include <mutex>
+#include <iostream>
+
+static volatile int counter = 0;
+static std::mutex m;
+
+static void safe_inc(int inc)
+{
+    for (int i = 0; i<1e7; ++i) {
+        std::unique_lock<std::mutex>(m);
+        counter += inc;
+    }
+}
+
+int main()
+{
+    std::thread t1(safe_inc, 1);
+    std::thread t2(safe_inc, -1);
+    t1.join();
+    t2.join();
+    std::cout << counter << "\n";
+    returtn 0;
+}
+```
+```
+#include <memory>
+class Rifle
+{
+public:
+    int shot();
+private:
+    class RifleImpl;
+    std::unique_ptr<RifleImpl> impl;
+};
 ```
 
 ## Algorithms and data structures
