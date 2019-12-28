@@ -66,6 +66,11 @@ private:
     std::unique_ptr<RifleImpl> impl;
 };
 ```
+## OS
+
+1. What is a zombie process?
+When a process exits, it is placed into a special zombie state that repre-
+sents terminated processes until the parent calls wait() or waitpid().
 
 ## Algorithms and data structures
 
