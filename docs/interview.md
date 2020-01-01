@@ -72,6 +72,20 @@ private:
 When a process exits, it is placed into a special zombie state that repre-
 sents terminated processes until the parent calls wait() or waitpid().
 
+## Processor architecutre
+
+### ARM
+
+1. What are the main parts of ARM SoC?
+ARM Processor Core, clocks and reset controller, interrupt controller, onchip interconnect bus architecture, usually AMBA, Advanced Microcontroller Bus Architecutre (AMBA APB - peripheral bus: connects peripherals, AMBA AXI - high perforfance system bus: connects memories (onchip and external) and other high speed devices)
+2. What is often the only directly exposed connection to the core itself?
+Debug port (JTAG, SWD).
+3. What is the difference between architecture and architecture profile?
+Architecture v7 introduced architecture profile: v7-A (Application processors), v7-R (Realtime), v7-M (Microcontroller).
+Implementations of architecture might be different: Cortex-A8 - architecture v7-A with a 13-stage pipeline, Cortex-A9 - architecture v7-A with an 8-stage pipeline.
+4. Which features of ARMv7 architecture do you know?
+VFPv3, Jazelle, TrustZone, SIMD, NEON, Virtualization.
+
 ## Algorithms and data structures
 
 Вопросы:
