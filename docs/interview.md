@@ -84,7 +84,22 @@ Debug port (JTAG, SWD).
 Architecture v7 introduced architecture profile: v7-A (Application processors), v7-R (Realtime), v7-M (Microcontroller).
 Implementations of architecture might be different: Cortex-A8 - architecture v7-A with a 13-stage pipeline, Cortex-A9 - architecture v7-A with an 8-stage pipeline.
 4. Which features of ARMv7 architecture do you know?
-VFPv3, Jazelle, TrustZone, SIMD, NEON, Virtualization.
+MMU, VFPv3, Jazelle, TrustZone, SIMD, NEON, Virtualization.
+5. Main features of ARM programming model?
+RISC (most instructions execute in 1 cycle), load-store architecture (the only memory access allowed are load and store, other common architectures are capable of manipulation or modifying contents of memory directly in one insturction), 32 bit (most internal registers are 32 bit), ARMv8 - 64bit (AArch64), two instructions sets: ARM (32-bit), thumb (16-bit), thumb-2 (adds 32-bit insturctions).
+Most cores have 7 basic operating modes (each mode has access to its own stack and its own subset or registers): supervisor (SVC, entered on reset), FIQ (high-priority interrupts), IRQ (normal interrupts), Abort (to handle memory access violations), Undef (undefined instructions), System (priviledged), User (mode in which most applications run. First 5 are exception modes.
+6. Register set. Name some ARM registers?
+r0-r15. cpsr (status register), spsr.
+7. Instruction set. Name some ARM instructions?
+ARM, thumb, thumb2. VFP (vector floating point), NEON (SIMD data processing architecture)
+```
+sub r1, r2, #5
+add r2, r3, r3, LSL #2
+ands r4, r4, 0x20 # s - modify status bits
+b <label>
+ldr r0, [r1]
+strneb r2, [r3, r4] # if (NE) *(r3 + r4) = r2, stores 1 byte
+```
 
 ## Algorithms and data structures
 
