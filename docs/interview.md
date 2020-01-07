@@ -68,9 +68,16 @@ private:
 ```
 ## OS
 
+### Linux
+
 1. What is a zombie process?
 When a process exits, it is placed into a special zombie state that repre-
 sents terminated processes until the parent calls wait() or waitpid().
+2. When can occur user and kernel preemption?
+User: when returning to user-space from a system call, when returning to user-space from an interrupt handler.
+Kernel: when an interrupt handler exits, before returning to kernel-space, when kernel code becomes preemptible again, if a task in the kernel explicitly calls schedule(), if a task in the kernel blocks (which results in a call to schedule()).
+3. What are the commonly used data structures in Linux Kernel?
+Linked lists (circular doubly linked list, struct list_head), queues (kfifo), maps (struct idr, mapping a unique identification number (UID) to a pointer), binary trees (rbtree).
 
 ## Processor architecutre
 
