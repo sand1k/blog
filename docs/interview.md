@@ -80,10 +80,14 @@ Kernel: when an interrupt handler exits, before returning to kernel-space, when 
 Linked lists (circular doubly linked list, struct list_head), queues (kfifo), maps (struct idr, mapping a unique identification number (UID) to a pointer), binary trees (rbtree).
 4. What is bottom half? What mechanism are used in kernel to defer work?
 Bottom half is general name of a mechanism to defer work (interrupt handling) in Linux. Softirqs, tasklets and work queues.
-5. What is critical section, race condition and syncronization?
+5. What are the causes of concurrency?
+SMP, kernel preemption, interrupts.
+6. What is critical section, race condition and syncronization?
 Code paths that access and manipulate shared data are called critical regions (also called critical sections).
 It is a bug if it is possible for two threads of execution to be simultaneously executing within the same critical region.When this does occur, we call it a race condition, so-named because the threads raced to get there first.
 Ensuring that unsafe concurrency is prevented and that race conditions do not occur is called synchronization.
+7. What is scalability of the system in terms of synchronization?
+Scalability is a measurement of how well a system can be expanded. In operating systems, we talk of the scalability with a large number of processes, a large number of processors, or large amounts of memory. Ideally, doubling the number of processors should result in a doubling of the system’s processor performance.
 
 ## Processor architecutre
 
