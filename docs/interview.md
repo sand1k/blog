@@ -78,6 +78,8 @@ User: when returning to user-space from a system call, when returning to user-sp
 Kernel: when an interrupt handler exits, before returning to kernel-space, when kernel code becomes preemptible again, if a task in the kernel explicitly calls schedule(), if a task in the kernel blocks (which results in a call to schedule()).
 3. What are the commonly used data structures in Linux Kernel?
 Linked lists (circular doubly linked list, struct list_head), queues (kfifo), maps (struct idr, mapping a unique identification number (UID) to a pointer), binary trees (rbtree).
+4. What is bottom half? What mechanism are used in kernel to defer work?
+Bottom half is general name of a mechanism to defer work (interrupt handling) in Linux. Softirqs, tasklets and work queues.
 
 ## Processor architecutre
 
